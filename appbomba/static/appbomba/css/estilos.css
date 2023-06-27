@@ -1,0 +1,21 @@
+body {
+  font-family: "monserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+#menu a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+
+#menu button {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* carrusel de imagenes  */
+
+.carousel-inner {
+  max-height: 39rem;
+}

@@ -1,0 +1,68 @@
+{% extends 'appbomba/base.html'%}
+{% load static %}
+
+{% block contenido %}
+<!-- Formulario de contacto -->
+<h1 class="p-3 fs-2 border-top border-3 text-primary">Formulario de Contacto</h1>
+<div class="container">
+  <div class="row">
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          <!-- Inicio form -->
+          <form method="POST" id="formulario1">
+              <!-- email -->
+              <div class="form-group">
+                  <label for="id_txtEmail" class="text-info">Email (EJ: matividela@gmail.com)</label>
+                  <input type="email" name="txtEmail" class="form-control" id="id_txtEmail"
+                      aria-describedby="emailHelp" placeholder="Ingrese su email aquí">
+              </div>
+
+              <!-- nombres -->
+              <div class="form-group">
+                  <label for="id_txtNombre" class="text-info">Nombres (EJ: Jorge Matias)</label>
+                  <input type="text" class="form-control" name="txtNombre" id="id_txtNombre" placeholder="Ingrese Nombres">
+              </div>
+
+              <!-- apellidos -->
+              <div class="form-group">
+                  <label for="id_txtApellidos" class="text-info">Apellidos (EJ: Rodriguez Videla)</label>
+                  <input type="text" class="form-control" name="txtApellidos" id="id_txtiIngresarApellidos" placeholder="Ingrese Apellidos">
+              </div>
+
+              <!-- direccion -->
+              <div class="form-group">
+                <label for="id_txtDireccion" class="text-info">Direccion (EJ: Psj Coraline #123, Cerro navia, RM)</label>
+                <input type="text" class="form-control" name="txtDireccion" id="id_txtiIngresarDireccion" placeholder="Ingrese Direccion">
+              </div>
+              
+              <!-- COMENTARIOS -->
+              <div class="form-group">
+                <label for="id_txtComentarios" class="text-info">Comentarios</label>
+                <input type="text" class="form-control" name="txtComentarios" required=""
+                    id="id_txtiIngresarComentarios" placeholder="">
+              </div>
+
+              
+              <div>
+                <h1 class="p-3 fs-2 border-top border-3 text-primary">BUSCA TU POKEMON</h1>
+                <label for="txtIndicador" class="text-info">Ingrese el nombre del Pokémon:</label>
+                <div>
+                  <input type="text" class="form-control "id="txtInd" name="txtInd" required>
+                  <input type="button" id="btnInfo" class="btn btn-primary" value="Busca tu Pokémon">
+                </div>
+                <div id="informacion"></div>
+              </div>
+              <br>
+              <!-- BOTON ENVIAR -->
+              <div class="form-check">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+          </form>
+      </div>
+  </div>
+</div>
+
+<script src="{% static 'appbomba/js/generatorInfo.js'%} "></script>
+<script src="{% static 'appbomba/js/validador.js'%}" type="text/javascript"></script>
+
+{% endblock %}

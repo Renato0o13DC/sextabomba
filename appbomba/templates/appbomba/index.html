@@ -1,0 +1,39 @@
+{% extends 'appbomba/base.html'%}
+{% load static %}
+
+{% block contenido %}
+
+<!-- carrusel de imagenes -->
+    <div id="carouselExample" class="carousel slide">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active" data-bs-interval="">
+          <img src="{% static 'appbomba/imgs/IMG_2183.jpg'%}" class="d-block w-100" alt="img1">
+        </div>
+
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="{% static 'appbomba/imgs/Slider4.jpg'%}" class="d-block w-100" alt="img2">
+        </div>
+
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="{% static 'appbomba/imgs/DJI_0087.jpg'%}" class="d-block w-100" alt="img3">
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+
+    <!-- intro -->
+    <section class="w-50 mx-auto text-center pt-5 " id="intro">
+      <h1 class="p-3 fs-2 border-top border-3">Los bomberos ofrecen programas de seguridad contra incendios en su comunidad y combaten los incendios, con el fin de salvar vidas e inmuebles y propiedades. También se ocupan de emergencias tales como accidentes de tráfico, vertidos químicos, inundaciones y situaciones de rescate. <span class="text-primary">Bomberos</span></h1>
+      <p class="p-3 fs-4"><span class="text-primary">Sexta Compañia "Bomba Pudahuel" </span>Es una compañia unica y con muchas especialidades para el cuidado de la comunidad</p>
+    </section>
+{% endblock %}

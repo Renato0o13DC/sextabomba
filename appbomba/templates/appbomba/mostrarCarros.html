@@ -1,0 +1,40 @@
+{% extends 'appbomba/base.html'%}
+{% load static %}
+
+{% block contenido %}
+
+<br><br>
+<div class="row text-center">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+
+    </div>
+        <h1>Listado de Carros Bomba</h1>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover table-responsive-sm">
+                <thead>
+                    <tr>
+                            <th>Patente</th>
+                            <th>Marca</th>
+                            <th>Nomenclatura</th>
+                            <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for c in carros %}
+                    <tr>
+                        <td>{{c.patente}}</td>
+                        <td>{{c.marca}}</td>
+                        <td>{{c.nomenclatura}}</td>
+                        <td>
+                            <a href="{% url 'Modificar_Carro' c.patente%}" class="btn btn-info">Modificar</a>
+                            <a href="{% url 'Eliminar_Carro' c.patente%} " class="btn btn-danger">Eliminar </a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+</div>
+
+{% endblock %}
